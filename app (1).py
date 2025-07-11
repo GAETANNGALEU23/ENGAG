@@ -27,7 +27,8 @@ st.set_page_config(page_title="First Bank -", page_icon="🏦", layout="wide")
 st.markdown("""
     <style>
         /* Style général */
-        .main { background-color: #f8f9fa; }
+         /*.main { background-color: #f8f9fa; }*/
+        .main { background-color: #fee8e8; }
         
         /* Messages utilisateur */
         .user-message {
@@ -152,8 +153,6 @@ with st.sidebar:
             st.markdown(f"🔹 {log['phrase'][:30]}...")
 
 
-# ... (le reste de votre code reste inchangé jusqu'à la partie sidebar)
-
 # Sidebar avec logo et historique
 with st.sidebar:
     
@@ -198,7 +197,7 @@ with st.sidebar:
 # Bandeau principal
 st.markdown("""
     <div style="background-color:#002d72;padding:15px;border-radius:10px;color:white;text-align:center;">
-        <h2 style="color:white;margin:0;">Afriland First Bank - IA Reporting</h2>
+        <h2 style="color:white;margin:0;">First Bank - IA </h2>
         <p style="margin:0;">Générez des rapports automatisés à partir de vos requêtes</p>
     </div>
 """, unsafe_allow_html=True)
