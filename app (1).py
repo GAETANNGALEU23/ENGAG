@@ -21,7 +21,7 @@ sys.path.append(pipeline_path)
 
 
 # Configuration page Streamlit
-st.set_page_config(page_title="Afriland First Bank - Reporting", page_icon="🏦", layout="wide")
+st.set_page_config(page_title="First Bank -", page_icon="🏦", layout="wide")
 
 # Style CSS personnalisé
 st.markdown("""
