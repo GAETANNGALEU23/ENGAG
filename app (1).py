@@ -151,6 +151,59 @@ with st.sidebar:
         for log in st.session_state.query_logs[-5:]:  # Affiche les 5 dernières requêtes
             st.markdown(f"🔹 {log['phrase'][:30]}...")
 
+
+# ... (le reste de votre code reste inchangé jusqu'à la partie sidebar)
+
+# Sidebar avec logo et historique
+with st.sidebar:
+    st.markdown("""
+        <div class="logo-container">
+            <h3>Afriland First Bank</h3>
+            <!-- Remplacez par votre logo -->
+            <img src="https://via.placeholder.com/150x80.png?text=Afriland+Logo" class="logo-img" alt="Logo Afriland First Bank">
+        </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # Section Historique
+    st.markdown("**Historique des requêtes**")
+    
+    if st.session_state.query_logs:
+        # Afficher les 10 dernières requêtes (les plus récentes en premier)
+        for i, log in enumerate(reversed(st.session_state.query_logs[-10:])):
+            # Créer des colonnes pour le numéro et le contenu
+            col1, col2 = st.columns([0.1, 0.9])
+            with col1:
+                st.markdown(f"**{len(st.session_state.query_logs)-i}.**")
+            with col2:
+                # Bouton cliquable pour recharger une ancienne requête
+                if st.button(log['phrase'][:50] + ("..." if len(log['phrase'])>50 else ""), 
+                           key=f"hist_{log['id']}",
+                           help="Cliquez pour recharger cette requête"):
+                    st.session_state.messages.append({"role": "user", "content": log['phrase']})
+                    st.rerun()
+                    
+            st.markdown(f"<small>{log['timestamp']}</small>", unsafe_allow_html=True)
+            st.markdown("---")
+    else:
+        st.markdown("<small>Aucune requête enregistrée</small>", unsafe_allow_html=True)
+    
+    # Bouton pour vider l'historique
+    if st.session_state.query_logs and st.button("🧹 Vider l'historique"):
+        st.session_state.query_logs = []
+        st.rerun()
+
+# ... (le reste de votre code)
+
+
+
+
+
+
+
+
+
 # Bandeau principal
 st.markdown("""
     <div style="background-color:#002d72;padding:15px;border-radius:10px;color:white;text-align:center;">
