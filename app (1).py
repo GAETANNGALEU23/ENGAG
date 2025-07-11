@@ -156,15 +156,6 @@ with st.sidebar:
 
 # Sidebar avec logo et historique
 with st.sidebar:
-    st.markdown("""
-        <div class="logo-container">
-            <h3>Afriland First Bank</h3>
-            <!-- Remplacez par votre logo -->
-            <img src="https://via.placeholder.com/150x80.png?text=Afriland+Logo" class="logo-img" alt="Logo Afriland First Bank">
-        </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("---")
     
     # Section Historique
     st.markdown("**Historique des requêtes**")
