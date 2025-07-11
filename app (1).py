@@ -138,7 +138,7 @@ with st.sidebar:
         <div class="logo-container">
             <h3>Afriland First Bank</h3>
             <!-- Remplacez 'logo_afriland.jpg' par le chemin de votre image -->
-            <img src="Capture d’écran 2025-06-25 191500.png" class="logo-img" alt="Logo Afriland First Bank">
+            #<img src="Capture d’écran 2025-06-25 191500.png" class="logo-img" alt="Logo Afriland First Bank">
             <img src="C:\Users\HP X360 G6\Desktop\Dashboard\Capture d’écran 2025-06-25 191500.png" class="logo-img" alt="Logo Afriland First Bank">
         </div>
     """, unsafe_allow_html=True)
