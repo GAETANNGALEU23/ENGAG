@@ -16,7 +16,8 @@ import time
 # Importer le pipeline
 pipeline_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "PIPELINE_COMPLET"))
 sys.path.append(pipeline_path)
-from Pipeline import execute_pipeline
+#from Pipeline import execute_pipeline
+from PIPELINE_COMPLET.Pipeline import execute_pipeline
 
 # Configuration page Streamlit
 st.set_page_config(page_title="Afriland First Bank - Reporting", page_icon="🏦", layout="wide")
